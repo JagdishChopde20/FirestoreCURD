@@ -1,1 +1,22 @@
 /* You can add global styles to this file, and also import other style files */
+@import '~bootstrap/dist/css/bootstrap.min.css';
+@import '~@fortawesome/fontawesome-free/css/all.min.css';
+
+/* ngx-toastr - regular style toast  */
+@import '~ngx-toastr/toastr';
+
+input.ng-touched.ng-invalid{
+    border-color: #dc3545;
+}
+
+div.validation-error{
+    width: 100%;
+    margin-top: .25rem;
+    font-size: 80%;
+    color: #dc3545;
+}
+
+/* for table row hover - in employee-list component */
+table.table-hover tbody tr:hover{
+    cursor: pointer;
+}

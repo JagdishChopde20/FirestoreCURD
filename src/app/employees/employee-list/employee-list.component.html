@@ -1,0 +1,24 @@
+<table class="table table-hover">
+    <thead class="bg-info text-light">
+      <th>Name</th>
+      <th>Position</th>
+      <th>Mobile</th>
+      <th></th>
+    </thead>
+    <tbody>
+      <tr *ngFor="let emp of list">
+        <td (click)="onEdit(emp)">{{emp.empCode}} - {{emp.fullName}}</td>
+        <td (click)="onEdit(emp)">{{emp.position}}</td>
+        <td (click)="onEdit(emp)">{{emp.mobile}}</td>
+        <td><a class="btn text-danger" (click)="onDelete(emp.id)"><i class="fa fa-trash"></i></a></td>
+      </tr>
+
+      <tr *ngIf="list.length == 0">
+        <td class="lead" colspan="4">No records found. Start inserting using form.</td>
+      </tr>
+    </tbody>
+  </table>
+
+  
+  <hr>
+  <small class="text-secondary" *ngIf="list.length > 0">Click on record to load it in form to edit.</small> 
